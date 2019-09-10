@@ -1,0 +1,74 @@
+body
+{
+ margin: 0;
+ padding: 0;
+}
+body:before
+{
+ content:'';
+ position: fixed;
+ width: 100vw;
+ height: 100vh;
+ background-image: url("wallpaper.jpg");
+ background-position: center center;
+ background-repeat: no-repeat;
+ background-attachment: fixed;
+ background-size: cover;
+ -webkit-filter: blur(10px);
+ -moz-filter: blur(10px);
+ filter;
+}
+.register
+{ 
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%,-50%);
+ width: 400px;
+ height: 1000px;
+ padding: 80px 40px;
+ background: lightblue;
+}
+.register h2
+{
+ margin: 10;
+ margin-top: 200px;
+ padding: 130px 0 10px;
+ color: #fff;
+ text-align: center;
+ text-transform: uppercase;
+}
+.register form
+{
+ margin: 20;
+ padding: 0 0 10px 0;
+ font-weight: bold;
+ color: #fff;
+}
+.register input
+{
+ width: 100%;
+ margin-bottom: 20px;
+}
+.register input[type=number],.register input[type=password],.register input[type=text],.register input[type=email]
+{
+ border: none;
+ border-bottom: 1px solid #fff;
+ background: transparent;
+ outline: none;
+ height: 25px;
+ color: #fff;
+ font-size: 15px;
+ padding: 10;
+}
+.register input[type=submit]
+{
+ height: 30px;
+ color: #fff;
+ font-size: 15px;
+ background: red;
+ cursor: pointer;
+ border-radius: 25px;
+ border: none;
+ outline: none;
+}

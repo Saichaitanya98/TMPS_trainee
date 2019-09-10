@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home</title>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<div class="w3-sidebar w3-bar-block w3-light-grey w3-card" style="width:130px">
+  <h5 class="w3-bar-item w3-xxxlarge"><i class="fa fa-home"></i></h5>
+  <button class="w3-bar-item w3-button tablink" onclick="openCity(event, 'Employee')">Employee</button>
+  <button class="w3-bar-item w3-button tablink" onclick="openCity(event, 'Project Manager')">Project Manager</button>
+  <button class="w3-bar-item w3-button tablink" onclick="openCity(event, 'Training Admin')">Training Admin</button>
+</div>
+<form action="">
+<div style="margin-left:130px">
+  <div id="Employee" class="w3-container city" style="display:none">
+    <h2>Employee</h2>
+    <div class="w3-bar w3-light-grey">
+    <a href="#" class="w3-bar-item w3-button">Nomination</a>
+    <div class="w3-dropdown-hover">
+      <button class="w3-button">Training</button>
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="#" class="w3-bar-item w3-button">Training List</a>
+        <a href="#" class="w3-bar-item w3-button">Post Training</a>
+      </div>
+    </div>
+    <div class="w3-dropdown-hover">
+      <button class="w3-button">Feedback</button>
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="#" class="w3-bar-item w3-button">Give Feedback</a>
+        <a href="#" class="w3-bar-item w3-button">View Feedback</a>
+      </div>
+    </div>
+  </div>
+  </div>
+  
+  <div id="Project Manager" class="w3-container city" style="display:none">
+    <h2>Project Manager</h2>
+     <div class="w3-bar w3-light-grey">
+    <a href="#" class="w3-bar-item w3-button">Traniee Request</a>
+    <div class="w3-dropdown-hover">
+      <button class="w3-button">Training</button>
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="#" class="w3-bar-item w3-button">Training List</a>
+        <a href="#" class="w3-bar-item w3-button">Post Training</a>
+      </div>
+    </div>
+    <div class="w3-dropdown-hover">
+      <button class="w3-button">Feedback</button>
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="#" class="w3-bar-item w3-button">Give Feedback</a>
+        <a href="#" class="w3-bar-item w3-button">View Feedback</a>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div id="Training Admin" class="w3-container city" style="display:none">
+    <h2>Training Admin</h2>
+     <div class="w3-bar w3-light-grey">
+    <a href="#" class="w3-bar-item w3-button">View Nominations</a>
+    <a href="#" class="w3-bar-item w3-button">Schedule Training</a>
+    
+    </div>
+  </div>
+  </div>
+</form>
+<script>
+function openCity(evt, cityName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("city");
+  for (i = 0; i < x.length; i++) 
+  {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) 
+  {
+    tablinks[i].className = tablinks[i].className.replace(" w3-red", ""); 
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " w3-red";
+}
+
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+</body>
+</html>
