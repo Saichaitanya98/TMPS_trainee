@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EmployeeHome</title>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<div class="w3-sidebar w3-bar-block w3-light-grey w3-card" style="width:130px">
+  <h2 class="w3-bar-item">Menu<br><i class="w3-xxxlarge fa fa-home"></i></h2>
+  <button class="w3-bar-item w3-button tablink" onclick="openCity(event, 'Employee')">Nomination</button>
+  <button class="w3-bar-item w3-button tablink" onclick="openCity(event, 'Employee')">Training</button>
+  <button class="w3-bar-item w3-button tablink" onclick="openCity(event, 'Employee')">Feedback</button>
+</div>
+<form>
+<div style="margin-left:130px">
+   <div class="w3-padding"></div>
+  <div id="Employee" class="w3-container city" style="display:none">
+    <h2>Nomination</h2>
+       <p><label>Emp_name</label></p>
+       <input type="text" class="w3-input" name="enam">
+       <p>Training</p>
+       <p>Project Manager Email</p>
+       <input type="text" class="w3-input" name="pro">
+       <p>Emp_Email:</p>
+       <input type="text" class="w3-input" name="mail">
+       <p>Department:</p>
+       <input type="text" class="w3-input" name="dept"><br>
+       <input type="submit" value="Send">
+ </div>  
+  
+  <div id="Employee" class="w3-container city" style="display:none">
+      <h2>Training</h2>
+    
+  </div>
+
+  <div id="Employee" class="w3-container city" style="display:none">
+      <h2>Feedback</h2>
+    
+  </div>
+ </div>
+</form>
+<script>
+function openCity(evt, cityName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("city");
+  for (i = 0; i < x.length; i++) 
+  {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) 
+  {
+    tablinks[i].className = tablinks[i].className.replace(" w3-red", ""); 
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " w3-red";
+}
+</script>
+</body>
+</html>
