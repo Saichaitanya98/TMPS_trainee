@@ -23,6 +23,7 @@ import javax.servlet.RequestDispatcher;
 			String psw = request.getParameter("password");
 			String gender = request.getParameter("gender");
 			String desg = request.getParameter("desg");
+			String des = request.getParameter("cdesg");
 			String city = request.getParameter("city");
 	   
 	   Registeration r = new Registeration();
@@ -32,8 +33,9 @@ import javax.servlet.RequestDispatcher;
 	   r.setMno(mno);
 	   r.setMail(mail);
 	   r.setPassword(psw);
-	   r.setGen(gender);
+	   r.setGender(gender);
 	   r.setDesg(desg);
+	   r.setDe(des);
 	   r.setCity(city);
 	   
 	   int m = Register.d(r);
@@ -41,13 +43,14 @@ import javax.servlet.RequestDispatcher;
 	     if(m>0) 
 	     {
 	    	 out.print("Successfully SingUp");
-	    	 RequestDispatcher requestDispatcher = request.getRequestDispatcher("/SigSu.html");
+	    	 RequestDispatcher requestDispatcher = request.getRequestDispatcher("Welcome.html");
 	    	 requestDispatcher.forward(request, response);
 	     }
 	     else
 	     {
-	    	 out.print("something went wrong");
-	    	 RequestDispatcher requestDispatcher = request.getRequestDispatcher("/SignUp.html");
+	    	 out.print("<font color:red>something went wrong</font>");
+	    	 System.out.println("-----------------------------");
+	    	 RequestDispatcher requestDispatcher = request.getRequestDispatcher("SignUp.html");
 	    	 requestDispatcher.include(request, response);
 	     }
 	 }

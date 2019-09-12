@@ -21,26 +21,24 @@ public class SI extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
 	{
 		PrintWriter out = response.getWriter();
-		int eid = Integer.parseInt(request.getParameter("eid"));
-		String psw = request.getParameter("psw");
+		int EID = Integer.parseInt(request.getParameter("eid"));
+		String PSW = request.getParameter("psw");
 		
 		Login lg=new Login();
-		lg.setEid(eid);
-		lg.setPsw(psw);
+		lg.setEid(EID);
+		lg.setPsw(PSW);
 		int m = Log.d(lg);
-		   
-	     if(m>0) 
+		  if(m>0) 
 	     {
-	    	 RequestDispatcher requestDispatcher = request.getRequestDispatcher("/Home.html");
+	    	 RequestDispatcher requestDispatcher = request.getRequestDispatcher("Home.html");
 	    	 requestDispatcher.forward(request, response);
 	     }
 	     else
 	     {
 	    	 out.print("something went wrong");
-	    	 RequestDispatcher requestDispatcher = request.getRequestDispatcher("/index.html");
+	    	 RequestDispatcher requestDispatcher = request.getRequestDispatcher("index.html");
 	    	 requestDispatcher.include(request, response);
 	     }
-	     System.out.println("hello kiran");
 	 }
 }
 	

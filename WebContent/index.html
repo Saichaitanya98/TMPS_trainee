@@ -9,17 +9,21 @@
  <div class="login-form">
    <img src="slogin.png" height="200" width="200" alt="" class="avatar"/>
    <h2>Sign In</h2>
-   <form method="post" action="SI" id="ed">
+   <form method="post" action="SS">
      <p>EmployeeId</p>
-     <input type="number" name="eid">
+     <input type="text" name="eid">
      <p>Password</p>
-     <input type="password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required><br><br>
-     <button type="submit" href="Home.html">Sign In</button>
-      <button type="submit" href="SignUp.html">Sign Up</button>
+     <input type="password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required><br>
+     <p>Company Designation</p><br>
+     <select name="cdesg">
+    <option>Select</option>
+    <option>Employee</option>
+    <option>Project Manager</option>
+    <option>Training Admin</option>
+    </select><br><br>
+     <input type="submit" onclick="window.location.href='http://localhost:2002/TMPS/Home.html;'" value="Sign In">
+     <input type="submit" onclick="window.location.href='http://localhost:2002/TMPS/SignUp.html;'" value="Sign Up">
    </form>
-  
-    
  </div>
-  
 </body>
 </html>

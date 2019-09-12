@@ -10,6 +10,7 @@ public class Registeration
 	private String password;
 	private String gender;
 	private String desg;
+	private String des;
 	private String city;
 	public String getFname() {
 		return fname;
@@ -51,10 +52,10 @@ public class Registeration
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public String getGen() {
+	public String getGender() {
 		return gender;
 	}
-	public void setGen(String gender) {
+	public void setGender(String gender) {
 		this.gender = gender;
 	}
 	public String getDesg() {
@@ -68,5 +69,11 @@ public class Registeration
 	}
 	public void setCity(String city) {
 		this.city = city;
+	}
+	public String getDe() {
+		return des;
+	}
+	public void setDe(String des) {
+		this.des = des;
 	}
 }
