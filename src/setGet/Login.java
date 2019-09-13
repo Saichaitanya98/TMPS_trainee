@@ -4,6 +4,13 @@ public class Login
 {
   private int eid;
   private String psw;
+  private String cd;
+public String getCd() {
+	return cd;
+}
+public void setCd(String cd) {
+	this.cd = cd;
+}
 public int getEid() 
 {
 	return eid;

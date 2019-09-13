@@ -10,13 +10,13 @@
 <div class="w3-sidebar w3-bar-block w3-light-grey w3-card" style="width:130px">
   <h2 class="w3-bar-item">Menu<br><i class="w3-xxxlarge fa fa-home"></i></h2>
   <button class="w3-bar-item w3-button tablink" onclick="openCity(event, 'Employee')">Nomination</button>
-  <button class="w3-bar-item w3-button tablink" onclick="openCity(event, 'Employee')">Training</button>
-  <button class="w3-bar-item w3-button tablink" onclick="openCity(event, 'Employee')">Feedback</button>
+  <button class="w3-bar-item w3-button tablink" onclick="openCity(event, 'Training')">Training</button>
+  <button class="w3-bar-item w3-button tablink" onclick="openCity(event, 'Feedback')">Feedback</button>
 </div>
 <form>
 <div style="margin-left:130px">
    <div class="w3-padding"></div>
-  <div id="Employee" class="w3-container city" style="display:none">
+   <div id="Employee" class="w3-container city" style="display:none">
     <h2>Nomination</h2>
        <p><label>Emp_name</label></p>
        <input type="text" class="w3-input" name="enam">
@@ -28,16 +28,17 @@
        <p>Department:</p>
        <input type="text" class="w3-input" name="dept"><br>
        <input type="submit" value="Send">
- </div>  
+   </div>  
   
-  <div id="Employee" class="w3-container city" style="display:none">
+  <div id="Training" class="w3-container city" style="display:none">
       <h2>Training</h2>
-    
+         <input type="submit" value="Training List" onclick="window.location.href='http://localhost:2002/TMPS/TrainingList.html;'">
+         <input type="submit" value="Post Training" onclick="window.location.href='http://localhost:2002/TMPS/PostTraining.html;'">
   </div>
-
-  <div id="Employee" class="w3-container city" style="display:none">
+  <div id="Feedback" class="w3-container city" style="display:none">
       <h2>Feedback</h2>
-    
+         <input type="submit" value="Give Feedback" onclick="window.location.href='http://localhost:2002/TMPS/GiveFeedback.html;'">
+         <input type="submit" value="View Feedback" onclick="window.location.href='http://localhost:2002/TMPS/ViewFeedback.html;'">
   </div>
  </div>
 </form>

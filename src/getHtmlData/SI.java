@@ -13,7 +13,6 @@ import setGet.Login;
 import sqlConn.Log;
 
 
-
 public class SI extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -22,11 +21,12 @@ public class SI extends HttpServlet {
 	{
 		PrintWriter out = response.getWriter();
 		int EID = Integer.parseInt(request.getParameter("eid"));
-		String PSW = request.getParameter("psw");
-		
+		String PSW = request.getParameter("password");
+		String CDESG = request.getParameter("cdesg");
 		Login lg=new Login();
 		lg.setEid(EID);
 		lg.setPsw(PSW);
+		lg.setCd(CDESG);
 		int m = Log.d(lg);
 		  if(m>0) 
 	     {

@@ -19,23 +19,23 @@ public class Log
 	try {
 		Class.forName("com.mysql.jdbc.Driver");
 		connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/training","root","admin");
-		prepareStatement = connection.prepareStatement("select eid,password from SignUp where eid=? and password=?");
+		prepareStatement = connection.prepareStatement("select eid,password,cdesg from SignUp where eid=?,password=?,cdesg=?");
 		prepareStatement.setInt(1,r.getEid());
 		prepareStatement.setString(2, r.getPsw());
+		prepareStatement.setString(3, r.getCd());
 		ResultSet rs = prepareStatement.executeQuery();
 	    if(rs.next())
 	    {
-	      System.out.println("tfbybh");;
+	      System.out.println("YOU SIGNIN SUCCESSFULLY");
 	    }
-	    System.out.println("hello dothoo");
 	    
-}
+       }
 	catch (Exception e) 
-	{
+	   {
 		e.printStackTrace();
-	}
-	return 1;
+	   }
+	   return 1;
 	
 
-}
+     }
 }
